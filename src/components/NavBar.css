@@ -1,0 +1,49 @@
+nav{
+    display: flex;
+    height: 8vw;
+    background-color: lightgoldenrodyellow;
+    border: 3px;
+    border-color: black;
+    border-style: solid;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    padding: 10px;
+    width: 80vw;
+}
+
+nav ul li a{
+    font-size: 2vw;
+}
+
+#carrito_logo{
+    height: 3vw;
+}
+
+#carrito .notif{
+    width: 2vw;
+    height: 2vw;
+    background-color: red;
+    border-radius: 0%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5vw;
+    display: inline-block;
+    position: relative;
+    bottom: 3vw;
+    right: 1vw;
+}
+
+#carrito{
+    text-decoration: none;
+    color: black;
+}
+
+#logo{
+    width: 6vw;
+}

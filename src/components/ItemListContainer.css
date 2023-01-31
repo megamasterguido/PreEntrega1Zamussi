@@ -1,0 +1,8 @@
+.itemListContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: xx-large;
+}
