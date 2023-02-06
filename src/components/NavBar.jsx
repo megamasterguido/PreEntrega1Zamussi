@@ -15,11 +15,11 @@ const BotonNav = (boton) => {
 }
 
 const NavBar = (props) => {
-    let botones = [new BotonNavBar("Repuestos", "#r"), new BotonNavBar("Electrodomesticos", "#e"), new BotonNavBar("Contacto", "#c"), new BotonNavBar("Acerca de nosotros", "#adn")]  ;
+    let botones = [new BotonNavBar("Repuestos", "#r"), new BotonNavBar("Electrodomesticos", "#e"), new BotonNavBar("Herramientas", "#h")]  ;
     return (
         <nav>
             <a href="#i">
-                <img id="logo" src={logo} alt="Logo de Argdev" />
+                <img id="logo" src="https://media.licdn.com/dms/image/C4D0BAQHQr932nRR5CQ/company-logo_200_200/0/1526477837127?e=1683763200&v=beta&t=4owibNFCWUWzgfUn7A3cYlhUHV66XpAPp11ZvFb4aOg" alt="Logo de Argdev" />
             </a>
             <ul>
                 {botones.map(BotonNav)}

@@ -3,13 +3,13 @@ import ItemListContainer from "./components/ItemListContainer";
 
 function App(){
 
-    let mensaje = `Greetings! (¡Felicidades!)`;
+    let mensaje = `Greetings! (Saludos!)`;
 
     return (
-        <div>
+        <>
             <NavBar/>
             <ItemListContainer mensaje={mensaje}/>
-        </div>
+        </>
     );
 } 
 

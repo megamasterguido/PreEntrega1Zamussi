@@ -1,8 +1,8 @@
 const ItemListContainer = (greeting) => {
     return (
-        <div className="itemListContainer">
+        <li className="itemListContainer">
             {greeting.mensaje}
-        </div>
+        </li>
     )
 }
 
