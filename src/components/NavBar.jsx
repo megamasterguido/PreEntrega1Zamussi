@@ -1,5 +1,4 @@
 import CartWidget from "./CartWidget";
-import logo from "./images/logo_argdev.png";
 
 function BotonNavBar(nombre, link){
     this.nombre = nombre;
