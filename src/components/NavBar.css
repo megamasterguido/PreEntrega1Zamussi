@@ -19,6 +19,21 @@ nav ul{
 
 nav ul li a{
     font-size: 2vw;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+nav ul li{
+    padding: 0.25vw;
+    transition: all 1s;
+}
+
+nav ul li:hover{
+    border: solid;
+    border-width: 0.25vw;
+    border-color: red;
+    transform: scale(1.2);
 }
 
 #carrito_logo{
@@ -42,8 +57,18 @@ nav ul li a{
 #carrito{
     text-decoration: none;
     color: black;
+    transition: all 1s;
+}
+
+#carrito:hover{
+    transform: scale(1.1);
 }
 
 #logo{
     width: 6vw;
+    transition: all 1s;
+}
+
+#logo:hover{
+    transform: scale(1.1);
 }
