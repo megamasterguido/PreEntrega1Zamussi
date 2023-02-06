@@ -3,7 +3,7 @@ import ItemListContainer from "./components/ItemListContainer";
 
 function App(){
 
-    let mensaje = `Greetings! (Saludos!)`;
+    let mensaje = `Greetings! (¡Saludos!)`;
 
     return (
         <>

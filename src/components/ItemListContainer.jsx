@@ -1,6 +1,6 @@
 const ItemListContainer = (greeting) => {
     return (
-        <li className="itemListContainer">
+        <li className={greeting.clase}>
             {greeting.mensaje}
         </li>
     )
