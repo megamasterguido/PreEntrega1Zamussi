@@ -6,7 +6,10 @@ function App(){
     let mensaje = `Greetings! (¡Saludos!)`;
 
     return (
-        <NavBar/>
+        <>
+            <NavBar/>
+            <ItemListContainer mensaje={mensaje}/>
+        </>
     );
 } 
 
