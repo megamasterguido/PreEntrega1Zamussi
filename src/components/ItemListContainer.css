@@ -1,8 +1,44 @@
-.itemListContainer {
+.ILC {
+    padding: 2vw;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ILC a{
+    text-decoration: none;
+    color: black;
+}
+
+.card{
+    display: flexbox;
+    flex-direction: column;
+    margin: 1vw;
+    width: 18vw;
+    height: 26vw;
+    font-size: 1vw;
     font-weight: bolder;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: xx-large;
+    border: solid;
+    padding: 1vw;
+    border-color: red;
+    background-color: white;
+    transition: all 1s;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card_img{
+    display: flex;
+    max-width: 18vw;
+    max-height: 18vw;
+    border: solid;
+    border-color: red;
+}
+
+.agregarCarrito{
+    width: 18vw;
+    height: 3vw;
+    font-size: 1.5vw;
 }
