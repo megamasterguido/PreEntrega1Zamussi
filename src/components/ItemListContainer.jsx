@@ -1,4 +1,5 @@
 import no_preview from "./images/no_preview.png"
+import { Link } from "react-router-dom";
 
 function Producto (id, nombre, categ, precio, foto=no_preview){
     this.id = id;
@@ -10,6 +11,7 @@ function Producto (id, nombre, categ, precio, foto=no_preview){
 
 const Card = (props) => {
     return(
+    <Link to={`detalle/${props.id}`}>
         <div className="card" id={props.id}>
             <a href={props.id}>
                 <div className="card_header">{props.id}</div>
@@ -26,6 +28,8 @@ const Card = (props) => {
                 </button>
             </div>
         </div>
+    </Link>
+        
     )
 }
 

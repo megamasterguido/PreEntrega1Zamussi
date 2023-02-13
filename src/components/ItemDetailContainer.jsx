@@ -1,5 +1,9 @@
-const ItemDetailContainer = ({children}) => {
-    return (
+import { useParams } from "react-router";
+
+const ItemDetailContainer = () => {
+    let {idProducto} = useParams();
+    console.log(idProducto);
+    /*return (
         <>
             <div id={{children}.id}>
                 <h1>
@@ -15,7 +19,7 @@ const ItemDetailContainer = ({children}) => {
                 AGREGAR AL CARRITO
             </button>
         </>
-    )
+    )*/
 }
 
 export default ItemDetailContainer;
