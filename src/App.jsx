@@ -7,7 +7,6 @@ function App(){
     return (
         <BrowserRouter>
             <NavBar/>
-            <ItemListContainer/>
             <Routes>
                 <Route exact path="/" element={<ItemListContainer />}/>
                 <Route exact path="/categoria/:idCategoria" element={<ItemListContainer />}/>

@@ -1,25 +1,23 @@
 import { useParams } from "react-router";
+import productos from "./Productos";
 
 const ItemDetailContainer = () => {
     let {idProducto} = useParams();
-    console.log(idProducto);
-    /*return (
+    let prod = productos.find(producto => {return idProducto == producto.id})
+    return (
         <>
-            <div id={{children}.id}>
-                <h1>
-                    {{children}.nombre}
-                </h1>
-                <img src={{children}.foto} alt="" />
-                Codigo: {{children}.id} <br/>
-                Categoria: {{children}.categ} <br/>
-                Precio: {{children}.precio}
+            <div className="detalle">
+                <h1>{prod.nombre}</h1>
+                <img src={prod.foto}/>
+                Codigo: {prod.id} <br/>
+                Categoria: {prod.categ} <br/>
+                Precio: {prod.precio}
+                <button>
+                    AGREGAR AL CARRITO
+                </button>
             </div>        
-            
-            <button className="agregarCarrito">
-                AGREGAR AL CARRITO
-            </button>
         </>
-    )*/
+    )
 }
 
 export default ItemDetailContainer;
