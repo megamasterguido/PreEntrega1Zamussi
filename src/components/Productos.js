@@ -1,4 +1,5 @@
 import no_preview from "./images/no_preview.png"
+
 function Producto (id, nombre, categ, precio, foto){
     this.id = id;
     this.nombre = nombre;
