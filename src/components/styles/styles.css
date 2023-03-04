@@ -1,0 +1,134 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 1vw;
+  height: 25vw;
+  font-size: 1vw;
+  font-weight: bolder;
+  border: solid;
+  padding: 1vw;
+  border-color: red;
+  background-color: white;
+  transition: all 1s;
+}
+.card .card_img {
+  display: flex;
+  max-width: 18vw;
+  max-height: 18vw;
+  border: solid;
+  border-color: red;
+}
+.card .card_footer {
+  display: flex;
+  justify-content: space-between;
+  height: 3vw;
+  font-size: 2vw;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+
+.detalle {
+  display: flex;
+  flex-direction: column;
+  padding: 2vw;
+}
+
+.detalle img {
+  height: 60vw;
+  width: 60vw;
+  align-self: center;
+}
+
+.detalle button {
+  align-self: center;
+  width: 20vw;
+  height: 5vw;
+}
+
+.ILC {
+  padding: 2vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.ILC a {
+  text-decoration: none;
+  color: black;
+}
+
+nav {
+  display: flex;
+  height: 8vw;
+  background-color: lightgoldenrodyellow;
+  border: 3px;
+  border-color: black;
+  border-style: solid;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  padding: 10px;
+  width: 80vw;
+}
+
+nav ul li a {
+  font-size: 2vw;
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+
+nav ul li {
+  padding: 0.25vw;
+  transition: all 1s;
+}
+
+nav ul li:hover {
+  border: solid;
+  border-width: 0.25vw;
+  border-color: red;
+  transform: scale(1.2);
+}
+
+#carrito_logo {
+  height: 3vw;
+}
+
+#carrito .notif {
+  width: 2vw;
+  height: 2vw;
+  background-color: red;
+  border-radius: 0%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5vw;
+  display: inline-block;
+  position: relative;
+  bottom: 3vw;
+  right: 1vw;
+}
+
+#carrito {
+  text-decoration: none;
+  color: black;
+  transition: all 1s;
+}
+
+#carrito:hover {
+  transform: scale(1.1);
+}
+
+#logo {
+  width: 6vw;
+  transition: all 1s;
+}
+
+#logo:hover {
+  transform: scale(1.1);
+}/*# sourceMappingURL=styles.css.map */

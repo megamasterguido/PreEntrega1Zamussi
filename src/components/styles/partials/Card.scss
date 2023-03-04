@@ -1,0 +1,32 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    margin: 1vw;
+    height: 25vw;
+    font-size: 1vw;
+    font-weight: bolder;
+    border: solid;
+    padding: 1vw;
+    border-color: red;
+    background-color: white;
+    transition: all 1s;
+
+    .card_img{
+        display: flex;
+        max-width: 18vw;
+        max-height: 18vw;
+        border: solid;
+        border-color: red;
+    }
+
+    .card_footer{
+        display: flex;
+        justify-content: space-between;
+        height: 3vw;
+        font-size: 2vw;
+    }
+
+    &:hover{
+        transform: scale(1.1);
+    }
+}

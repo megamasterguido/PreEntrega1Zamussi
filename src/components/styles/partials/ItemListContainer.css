@@ -1,0 +1,11 @@
+.ILC {
+  padding: 2vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.ILC a {
+  text-decoration: none;
+  color: black;
+}/*# sourceMappingURL=ItemListContainer.css.map */
