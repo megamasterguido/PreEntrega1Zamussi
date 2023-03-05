@@ -5,7 +5,7 @@ const ItemDetail = (props) => {
     return (
         <div className="detalle">
             <h1>{prod.nombre}</h1>
-            <img src={prod.foto}/>
+            <img alt="foto" src={prod.foto}/>
             Codigo: {prod.id} <br/>
             Categoria: {prod.categ} <br/>
             Precio: {prod.precio}

@@ -6,7 +6,7 @@ const Card = (props) => {
             <Link to={`/detalle/${props.id}`}>
                 <div className="card_header">{props.id}</div>
                 <div className="card_body">
-                    <img className="card_img" src={props.foto}/>
+                    <img className="card_img" alt="foto" src={props.foto}/>
                     {props.nombre} <br/>
                     Categoria: {props.categ} <br/>
                     ${props.precio}
