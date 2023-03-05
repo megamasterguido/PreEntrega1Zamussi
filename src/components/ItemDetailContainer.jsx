@@ -4,7 +4,6 @@ import productos from "./Productos";
 
 const ItemDetailContainer = () => {
     let {idProducto} = useParams();
-    let prod = productos.find(producto => {return idProducto == producto.id})
     return (
         ItemDetail(idProducto)
     )

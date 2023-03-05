@@ -1,7 +1,7 @@
 import productos from "./Productos";
 
 const ItemDetail = (props) => {
-    let prod = productos.find(producto => {return props == producto.id})
+    let prod = productos.find(producto => {return props === producto.id})
     return (
         <div className="detalle">
             <h1>{prod.nombre}</h1>

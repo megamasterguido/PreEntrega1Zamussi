@@ -7,7 +7,7 @@ const ItemListContainer = () => {
     let productosFiltrados = [];
 
     if(idCategoria){
-        productosFiltrados = productos.filter(prod => prod.categ == idCategoria)
+        productosFiltrados = productos.filter(prod => prod.categ === idCategoria)
     }
     else {
         productosFiltrados = productos;
