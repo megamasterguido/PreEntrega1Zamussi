@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
+import { ItemQuantitySelector } from "./ItemQuantitySelector";
 
 const Card = (props) => {
+    
+    let cod = props.id;
     return(
-        <div className="card" id={props.id}>
-            <Link to={`/detalle/${props.id}`}>
-                <div className="card_header">{props.id}</div>
+        <div className="card" id={cod}>
+            <Link to={`/detalle/${cod}`}>
+                <div className="card_header">{cod}</div>
                 <div className="card_body">
                     <img className="card_img" alt="foto" src={props.foto}/>
                     {props.nombre} <br/>
@@ -13,10 +16,7 @@ const Card = (props) => {
                 </div>
             </Link>
             <div className="card_footer">
-                <input type="number" />
-                <button >
-                    Agregar
-                </button>
+                <ItemQuantitySelector props = {props}/>
             </div>
         </div>
     )

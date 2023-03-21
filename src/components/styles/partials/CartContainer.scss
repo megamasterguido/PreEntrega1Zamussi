@@ -1,0 +1,47 @@
+.carrito{
+    display: flex;
+    flex-direction: column;
+    .carrito_item{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: xx-large;
+        > *{
+            margin-inline: 3vw;
+            margin-bottom: 2vw;
+        }
+        img{
+            width: 10vw;
+        }
+
+        .carrito_cod{
+            width: 12vw;
+        }
+
+        .carrito_titulo{
+            width: 56vw;
+        }
+
+        .carrito_precio{
+            width: 12vw;
+        }
+
+        .carrito_cant{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 20vw;
+            button{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-inline: 10px;
+                font-size: xx-large;
+                height: 30px;
+                width: 30px;
+                justify-content: center;
+            }
+        }
+    }
+}
