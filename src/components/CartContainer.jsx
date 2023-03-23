@@ -1,5 +1,15 @@
-import { useState } from "react";
+import {useState } from "react";
 import { useCartContext } from "../context/CartContext";
+
+const CartTotal = () => {
+    const {cartTotal} = useCartContext();
+
+    return(
+        <div className="totalCarrito">
+            TOTAL: ${cartTotal}
+        </div>
+    )
+}
 
 const BorrarCarrito = () =>{
     const {cartList, setCartList} = useCartContext();
@@ -14,29 +24,30 @@ const BorrarCarrito = () =>{
     )
 }
 
-const CartItem = (props) => {
-    let prod = props.prod
+const DisplayCant = ({props}) => {
     let [cant, setCant] = useState(props.cant)
-    const {cartList, setCartList} = useCartContext();
+    const {cartList, setCartList, cartTotal, setCartTotal} = useCartContext();
     
     const eliminarCarrito = () => {
         setCartList(cartList.filter(p => !(p === props)))
+        setCartTotal(cartTotal-Number(props.prod.precio)*props.cant)
     }
 
     const sumarCarrito = () => {
-        if(cant+1 <= prod.stock){
+        if(cant+1 <= props.prod.stock){
             props.cant++
-            setCant(props.cant);
+            setCant(cant+1)
+            setCartTotal(cartTotal+Number(props.prod.precio))
         }
         else{
             alert("No se pueden sumar mas unidades")
         }
     }
-
     const restarCarrito = () => {
         if(cant-1 > 0){
             props.cant--
-            setCant(props.cant);
+            setCant(cant-1)
+            setCartTotal(cartTotal-Number(props.prod.precio))
         }
         else{
             eliminarCarrito();
@@ -44,16 +55,26 @@ const CartItem = (props) => {
     }
 
     return(
+        <>
+        <button className="carrito-" onClick={restarCarrito}>-</button>
+        {cant}
+        <button className="carrito+" onClick={sumarCarrito}>+</button>
+        <button className="carritoX" onClick={eliminarCarrito}>X</button>
+        </>
+    )
+}
+
+const CartItem = (props) => {
+    let prod = props.prod
+
+    return(
         <div className="carrito_item">
-            <img src={prod.foto} className="carrito_icono"/>
+            <img src={prod.foto} className="carrito_icono" alt="icono"/>
             <span className="carrito_cod">{prod.id}</span>   
             <span className="carrito_titulo">{prod.nombre}</span>
             <span className="carrito_precio">${prod.precio}</span>
             <span className="carrito_cant">
-                <button className="carrito-" onClick={restarCarrito}>-</button>
-                {cant}
-                <button className="carrito+" onClick={sumarCarrito}>+</button>
-                <button className="carritoX" onClick={eliminarCarrito}>X</button>
+                <DisplayCant props={props}/>
             </span>
         </div>
     )
@@ -63,17 +84,11 @@ export const CartContainer = () => {
     
     const {cartList} = useCartContext();
 
-    let total = 0
-
-    cartList.forEach(element => {total += element.prod.precio * element.cant});
-
     return (
         <div className="carrito">
             {cartList.map(CartItem)}
             <BorrarCarrito/>
-            <div className="totalCarrito">
-                TOTAL: ${total}
-            </div>
+            <CartTotal/>
         </div>
     )
 }

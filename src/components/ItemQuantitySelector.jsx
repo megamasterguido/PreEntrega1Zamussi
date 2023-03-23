@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useCartContext } from "../context/CartContext";
 
 export const ItemQuantitySelector = ({props}) => {
-    const {cartList, agregarCarrito} = useCartContext();
+    const {cartList, agregarCarrito, cartTotal, setCartTotal} = useCartContext();
     
     let [cant, setCant] = useState(0);
     let maxUni = props.stock;
@@ -30,6 +30,7 @@ export const ItemQuantitySelector = ({props}) => {
             }
             else{
                 prodEnCarrito.cant += cant;
+                setCartTotal(cartTotal + props.precio * cant)
             }
         }
         else{
