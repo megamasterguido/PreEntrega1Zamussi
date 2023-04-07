@@ -19,10 +19,19 @@
   border-color: red;
 }
 .card .card_footer {
+  height: 3vw;
+}
+.card .card_footer .IQS {
   display: flex;
   justify-content: space-between;
-  height: 3vw;
-  font-size: 2vw;
+}
+.card .card_footer .IQS button {
+  display: flex;
+  font-size: 1vw;
+}
+.card .card_footer .IQS input {
+  width: 100%;
+  font-size: 1vw;
 }
 .card:hover {
   transform: scale(1.1);
@@ -32,28 +41,37 @@
   display: flex;
   flex-direction: column;
   padding: 2vw;
+  font-size: xx-large;
 }
-
 .detalle img {
-  height: 60vw;
-  width: 60vw;
+  height: 40vw;
+  width: 40vw;
   align-self: center;
 }
-
-.detalle button {
-  align-self: center;
+.detalle .IQS {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.detalle .IQS button {
+  font-size: xx-large;
+  font-weight: bolder;
   width: 20vw;
-  height: 5vw;
+}
+.detalle .IQS input {
+  font-size: xx-large;
+  font-weight: bolder;
+  width: 20vw;
 }
 
-.ILC {
+.ItemList {
   padding: 2vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.ILC a {
+.ItemList a {
   text-decoration: none;
   color: black;
 }
@@ -100,18 +118,16 @@ nav ul li:hover {
   height: 3vw;
 }
 
-#carrito .notif {
-  width: 2vw;
-  height: 2vw;
-  background-color: red;
-  border-radius: 0%;
+#carrito {
   text-align: center;
   font-weight: bold;
-  font-size: 1.5vw;
-  display: inline-block;
-  position: relative;
-  bottom: 3vw;
-  right: 1vw;
+  font-size: 1vw;
+}
+#carrito .notif_items span {
+  background-color: red;
+}
+#carrito .notif_total span {
+  background-color: lightblue;
 }
 
 #carrito {
@@ -175,4 +191,19 @@ nav ul li:hover {
   height: 30px;
   width: 30px;
   justify-content: center;
+}
+.carrito .resumenCarrito {
+  display: flex;
+  flex-direction: row;
+  font-size: xx-large;
+  font-weight: bolder;
+  justify-content: space-around;
+}
+.carrito .resumenCarrito .borrarCarrito {
+  display: flex;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+.carrito .resumenCarrito .totalCarrito {
+  display: flex;
 }/*# sourceMappingURL=styles.css.map */

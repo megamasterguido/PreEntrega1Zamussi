@@ -4,12 +4,13 @@ import { ItemQuantitySelector } from "./ItemQuantitySelector";
 const Card = (props) => {
     
     let cod = props.id;
+    let foto = props.foto
     return(
         <div className="card" id={cod}>
             <Link to={`/detalle/${cod}`}>
                 <div className="card_header">{cod}</div>
                 <div className="card_body">
-                    <img className="card_img" alt="foto" src={props.foto}/>
+                    <img className="card_img" alt="foto" src={require("" + foto)}/>
                     {props.nombre} <br/>
                     Categoria: {props.categ} <br/>
                     ${props.precio}

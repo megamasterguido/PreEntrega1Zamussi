@@ -40,18 +40,16 @@ nav ul li:hover {
   height: 3vw;
 }
 
-#carrito .notif {
-  width: 2vw;
-  height: 2vw;
-  background-color: red;
-  border-radius: 0%;
+#carrito {
   text-align: center;
   font-weight: bold;
-  font-size: 1.5vw;
-  display: inline-block;
-  position: relative;
-  bottom: 3vw;
-  right: 1vw;
+  font-size: 1vw;
+}
+#carrito .notif_items span {
+  background-color: red;
+}
+#carrito .notif_total span {
+  background-color: lightblue;
 }
 
 #carrito {

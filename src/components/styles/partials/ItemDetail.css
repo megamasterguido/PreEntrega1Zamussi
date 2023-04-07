@@ -1,0 +1,26 @@
+.detalle {
+  display: flex;
+  flex-direction: column;
+  padding: 2vw;
+  font-size: xx-large;
+}
+.detalle img {
+  height: 40vw;
+  width: 40vw;
+  align-self: center;
+}
+.detalle .IQS {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.detalle .IQS button {
+  font-size: xx-large;
+  font-weight: bolder;
+  width: 20vw;
+}
+.detalle .IQS input {
+  font-size: xx-large;
+  font-weight: bolder;
+  width: 20vw;
+}/*# sourceMappingURL=ItemDetail.css.map */

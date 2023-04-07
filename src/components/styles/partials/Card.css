@@ -19,10 +19,19 @@
   border-color: red;
 }
 .card .card_footer {
+  height: 3vw;
+}
+.card .card_footer .IQS {
   display: flex;
   justify-content: space-between;
-  height: 3vw;
-  font-size: 2vw;
+}
+.card .card_footer .IQS button {
+  display: flex;
+  font-size: 1vw;
+}
+.card .card_footer .IQS input {
+  width: 100%;
+  font-size: 1vw;
 }
 .card:hover {
   transform: scale(1.1);

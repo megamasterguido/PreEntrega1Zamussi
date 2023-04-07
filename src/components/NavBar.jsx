@@ -14,7 +14,7 @@ const BotonNav = (boton) => {
     )
 }
 
-const NavBar = (props) => {
+const NavBar = () => {
     let botones = [new BotonNavBar("Repuestos", "/categoria/Repuestos"), new BotonNavBar("Electrodomesticos", "/categoria/Electro"), new BotonNavBar("Herramientas", "/categoria/Herramientas")];
     return (
         <nav>

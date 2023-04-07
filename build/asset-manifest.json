@@ -1,16 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.7d69e71c.css",
-    "main.js": "/static/js/main.9baf9ed3.js",
+    "main.css": "/static/css/main.8c93973d.css",
+    "main.js": "/static/js/main.ea1b4d19.js",
     "static/js/787.a12b7665.chunk.js": "/static/js/787.a12b7665.chunk.js",
+    "static/media/10408.png": "/static/media/10408.b0b1c5f3233759faa644.png",
+    "static/media/1718.jpg": "/static/media/1718.c36b7780c72bd6dcd18e.jpg",
+    "static/media/1666.jpg": "/static/media/1666.f27e6b8533ef858059b6.jpg",
+    "static/media/1719_4.png": "/static/media/1719_4.cb9069369128727bdeaf.png",
+    "static/media/10686.jpg": "/static/media/10686.d269de34ccb35bf51864.jpg",
+    "static/media/2082.jpg": "/static/media/2082.a70fb7fd6f7c6017bee0.jpg",
+    "static/media/64.png": "/static/media/64.002c3bde5ce40f25981a.png",
+    "static/media/10696.jpg": "/static/media/10696.7f041737351a24e3131a.jpg",
     "static/media/no_preview.png": "/static/media/no_preview.7a3a714f9ea1611a6690.png",
+    "static/media/63.jpg": "/static/media/63.1d76e6380bedf6a4b0a6.jpg",
+    "static/media/styles.css.map": "/static/media/styles.css.93e1f42d7ce28cba06cb.map",
     "index.html": "/index.html",
-    "main.7d69e71c.css.map": "/static/css/main.7d69e71c.css.map",
-    "main.9baf9ed3.js.map": "/static/js/main.9baf9ed3.js.map",
+    "static/media/NavBar.css.map": "/static/media/NavBar.css.084c2c84a9f07156d821.map",
+    "static/media/CartContainer.css.map": "/static/media/CartContainer.css.10227bd594cb2b12f0d0.map",
+    "static/media/Card.css.map": "/static/media/Card.css.f82ef086a74169a4ba26.map",
+    "static/media/ItemDetail.css.map": "/static/media/ItemDetail.css.717060cb22134a0f7e70.map",
+    "static/media/ItemListContainer.css.map": "/static/media/ItemListContainer.css.26572503965c0cbf7e24.map",
+    "main.8c93973d.css.map": "/static/css/main.8c93973d.css.map",
+    "main.ea1b4d19.js.map": "/static/js/main.ea1b4d19.js.map",
     "787.a12b7665.chunk.js.map": "/static/js/787.a12b7665.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7d69e71c.css",
-    "static/js/main.9baf9ed3.js"
+    "static/css/main.8c93973d.css",
+    "static/js/main.ea1b4d19.js"
   ]
 }

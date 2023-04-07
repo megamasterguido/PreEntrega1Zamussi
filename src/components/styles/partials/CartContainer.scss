@@ -44,4 +44,19 @@
             }
         }
     }
+    .resumenCarrito{
+        display: flex;
+        flex-direction: row;
+        font-size: xx-large;
+        font-weight: bolder;
+        justify-content: space-around;
+        .borrarCarrito{
+            display: flex;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+        .totalCarrito{
+            display: flex;
+        }
+    }
 }

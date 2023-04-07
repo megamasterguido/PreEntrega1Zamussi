@@ -1,21 +1,29 @@
 import { useParams } from "react-router-dom";
-import Card from "./Card";
-import productos from "./Productos"
+import { useEffect, useState } from "react";
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
+import { app } from "../Firestore";
+import ItemList from "./ItemList";
 
 const ItemListContainer = () => {
     const {idCategoria} = useParams();
-    let productosFiltrados = [];
+    const [productos, setProductos] = useState([])
 
-    if(idCategoria){
-        productosFiltrados = productos.filter(prod => prod.categ === idCategoria)
-    }
-    else {
-        productosFiltrados = productos;
-    }
+    useEffect(() => {
+        const db = getFirestore(app)
+        let col = []
+        if(idCategoria){
+            col = query(collection(db, "productos"), where("categ", "==", idCategoria))
+        }
+        else{
+            col = collection(db, "productos")
+        }
+
+        getDocs(col).then(coldb => setProductos(coldb.docs.map(doc => ({id:doc.id, ...doc.data()})))).catch(err => console.error(err))
+    },[idCategoria])
+
+
     return (
-        <div className="ILC">
-            {productosFiltrados.map(Card)}
-        </div>
+        <ItemList productos={productos}/>
     )
 }
 

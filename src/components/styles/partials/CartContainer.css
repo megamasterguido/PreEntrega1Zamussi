@@ -40,4 +40,19 @@
   height: 30px;
   width: 30px;
   justify-content: center;
+}
+.carrito .resumenCarrito {
+  display: flex;
+  flex-direction: row;
+  font-size: xx-large;
+  font-weight: bolder;
+  justify-content: space-around;
+}
+.carrito .resumenCarrito .borrarCarrito {
+  display: flex;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+.carrito .resumenCarrito .totalCarrito {
+  display: flex;
 }/*# sourceMappingURL=CartContainer.css.map */

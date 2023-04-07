@@ -39,9 +39,9 @@ export const ItemQuantitySelector = ({props}) => {
     }
 
     return(
-        <>
+        <div className="IQS">
             <input placeholder="0" type="number" min="0" step="1" max={props.stock} onInput={inputHandler}/>
             <button onClick={clickHandler}>Agregar</button>
-        </>
+        </div>
     )
 }

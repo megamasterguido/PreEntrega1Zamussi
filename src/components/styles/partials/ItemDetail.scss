@@ -1,0 +1,32 @@
+.detalle{
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+    font-size: xx-large;
+
+    img{
+        height: 40vw;
+        width: 40vw;
+        align-self: center;
+    }
+
+    .IQS{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        button{
+            font-size: xx-large;
+            font-weight: bolder;
+            width: 20vw;
+        }
+
+        input{
+            font-size: xx-large;
+            font-weight: bolder;
+            width: 20vw;
+        }
+
+    }
+
+}
