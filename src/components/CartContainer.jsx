@@ -112,7 +112,7 @@ const CartFormulario = () => {
     }
     
     async function comprar(){
-        if(cliente.nombre != undefined && cliente.telefono != undefined && cliente.mail != undefined){
+        if(cliente.nombre !== undefined && cliente.telefono !== undefined && cliente.mail !== undefined){
             const buyer = {nombre: cliente.nombre, telefono: cliente.telefono, mail: cliente.mail}
             const order = cartList.map(item => ({id: item.prod.id, nombre: item.prod.nombre, precio: item.prod.precio}))
             const pedido = {
