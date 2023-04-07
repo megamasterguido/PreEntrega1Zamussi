@@ -89,7 +89,7 @@ const CartItem = (props) => {
 const CartVolver = () => {
     return(
         <div className="carritoVacio">
-            El carrito se encuentra vacio. Desea volver a la pantalla principal para agregar elementos?
+            ¿El carrito se encuentra vacio. Desea volver a la pantalla principal para agregar elementos?
             <Link to={"/"}>
                 <button> VOLVER </button>
             </Link>
@@ -98,28 +98,50 @@ const CartVolver = () => {
 
 }
 
-const CartComprar = () => {
-
-    const {cartTotal, cartList} = useCartContext();
+const CartFormulario = () => {
+    const [cliente, setCliente] = useState({})
+    const {cartTotal, cartList, setCartList, setCartTotal} = useCartContext();
     const db = getFirestore(app)
     const col = collection(db, "orders")
-    cartList.map(item => console.log(item.prod.id, item.prod.nombre, item.prod.precio))
-    console.log(cartList)
 
-    const Comprar = () => {
-        const buyer = {nombre: "Guido Zamussi", tel: 3413845918, email: "guidozamussi@hotmail.com"}
-        const order = cartList.map(item => ({id: item.prod.id, nombre: item.prod.nombre, precio: item.prod.precio}))
-        const orden = {
-            comprador: buyer,
-            orden: order,
-            total: cartTotal
+    const clienteHandler = (evento) => {
+        setCliente({
+            ...cliente,
+            [evento.target.name]: evento.target.value
+        })
+    }
+    
+    async function comprar(){
+        if(cliente.nombre != undefined && cliente.telefono != undefined && cliente.mail != undefined){
+            const buyer = {nombre: cliente.nombre, telefono: cliente.telefono, mail: cliente.mail}
+            const order = cartList.map(item => ({id: item.prod.id, nombre: item.prod.nombre, precio: item.prod.precio}))
+            const pedido = {
+                comprador: buyer,
+                orden: order,
+                total: cartTotal
+            }
+            await addDoc(col, pedido).then(resp=>alert("Su ID de transaccion es: " + resp.id)).catch(err=>console.error(err))
+            setCartList([])
+            setCartTotal(0)
         }
-        console.log(col, orden, cartTotal)
-        addDoc(col, orden).then(resp=>console.log(resp.id)).catch(err=>console.error(err))
+        else{
+            alert("Complete todos los datos del formulario para poder confirmar la compra")
+        }
     }
 
     return(
-        <button className="comprarCarrito" onClick={Comprar}>Finalizar Pedido</button>
+        <div className="carrito_form">
+
+            <form id="formularioCliente">
+                <label htmlFor="nombre">Nombre y apellido</label>
+                <input onChange={clienteHandler} type="text" name="nombre" value={cliente.nombre}/>
+                <label htmlFor="telefono">Telefono</label>
+                <input onChange={clienteHandler} type="text" name="telefono" value={cliente.telefono}/>
+                <label htmlFor="mail">Correo Electronico</label>
+                <input onChange={clienteHandler} type="text" name="mail" value={cliente.mail}/>
+            </form>
+            <button type="submit" className="comprarCarrito" onClick={comprar}>Finalizar Pedido</button>
+        </div>
     )
 }
 
@@ -139,9 +161,11 @@ export const CartContainer = () => {
             <div className="carrito">
                 {cartList.map(CartItem)}
                 <div className="resumenCarrito">
-                    <BorrarCarrito/>
-                    <CartTotal/>
-                    <CartComprar/>
+                    <span>
+                        <BorrarCarrito/>
+                        <CartTotal/> 
+                    </span>
+                        <CartFormulario/>
                 </div>
             </div>
         )

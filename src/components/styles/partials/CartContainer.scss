@@ -1,6 +1,23 @@
 .carrito{
     display: flex;
     flex-direction: column;
+
+    .carritoVacio{
+        margin: 10vw;
+        font-size: xx-large;
+        font-weight: bolder;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        button{
+            margin: 10vw;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+    }
+
+
     .carrito_item{
         display: flex;
         flex-direction: row;
@@ -46,17 +63,43 @@
     }
     .resumenCarrito{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         font-size: xx-large;
         font-weight: bolder;
-        justify-content: space-around;
-        .borrarCarrito{
+        margin: 2vw;
+        span{
             display: flex;
-            font-size: xx-large;
-            font-weight: bolder;
+            flex-direction: row;
+            justify-content: space-around;
+            .borrarCarrito{
+                display: flex;
+                font-size: xx-large;
+                font-weight: bolder;
+            }
+            .totalCarrito{
+                display: flex;
+            }
+
         }
-        .totalCarrito{
+        .carrito_form{
+            margin: 2vw;
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            #formularioCliente{
+                display: flex;
+                flex-direction: column;
+                input{
+                    font-size: larger;
+                }
+            }
+            .comprarCarrito{
+                margin: 2vw;
+                display: flex;
+                font-size: xx-large;
+                font-weight: bolder;
+                
+            }
         }
     }
 }
